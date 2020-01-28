@@ -18,8 +18,9 @@ if os.name == 'nt':
         OSGEO4W += "64"
     assert os.path.isdir(OSGEO4W), "Directory does not exist: " + OSGEO4W
     os.environ['OSGEO4W_ROOT'] = OSGEO4W
-    os.environ['GDAL_DATA'] = OSGEO4W + r"\share\gdal"
+    os.environ['GDAL_DATA'] = "C:\Program Files\GDAL\gdal-data" 
     os.environ['PROJ_LIB'] = OSGEO4W + r"\share\proj"
+    GDAL_LIBRARY_PATH = r'C:\OSGeo4W64\bin\gdal300'
     os.environ['PATH'] = OSGEO4W + r"\bin;" + os.environ['PATH']
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -34,7 +35,7 @@ SECRET_KEY = 'a6&9p+pq(0r6f!fz0407_vn8j)nmz1=j*m*6l((d+x0%6huhdg'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["127.0.0.1"]
 
 
 # Application definition

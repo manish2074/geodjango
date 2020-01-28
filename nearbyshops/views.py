@@ -6,9 +6,8 @@ from .models import Shop
 
 # Create your views here.
 
-longitude = -80.191_788
-latitude = 25.761_681
-
+longitude = 9498500.6
+latitude = 3211500.3223
 
 user_location =Point(longitude, latitude,srid=4326)
 
