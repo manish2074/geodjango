@@ -48,7 +48,9 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django.contrib.gis',
+    'leaflet',
     'nearbyshops',
+    'report',
 ]
 
 MIDDLEWARE = [
@@ -135,3 +137,15 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
 STATIC_URL = '/static/'
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, "static"),
+    '/var/www/static/',
+]
+LEAFLET_CONFIG = {
+    'DEFAULT_CENTER':(37.0902, -95.7129),
+    'DEFAULT ZOOM':8,
+    'MAX_ZOOM':20,
+    'MIN_ZOOM':4,
+    'SCALE':'both',
+    'ATTRIBUTION_PREFIX':'Belongs to Manish',
+}

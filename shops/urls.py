@@ -16,8 +16,11 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from nearbyshops import views
-
+from report.views import HomePageView,county_datasets
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('',views.Home.as_view(),name='distance')
+    path('maps/',HomePageView.as_view(),name='home'),
+    path('country/maps/',county_datasets,name='county'),
+    path('incidence_data/',HomePageView.as_view(),name='home'),
+    # path('',views.Home.as_view(),name='distance'),
 ]
